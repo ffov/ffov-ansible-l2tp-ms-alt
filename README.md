@@ -5,4 +5,4 @@ Für die hier gespei:wcherten Ansible-Rollen wird das Zusatzpaket „python-neta
 und mindestens Ansible Version 1.9 benötigt.
 
 
-Zak: erste versuche
+Zak: erste Versuche
