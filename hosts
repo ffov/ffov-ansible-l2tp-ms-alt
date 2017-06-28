@@ -21,7 +21,7 @@
 
 # Multidomänen-L2TP Gateways mit oder ohne Direktanbindung FFRL
 [gateways]
-gw02-1		ansible_ssh_host=176.9.153.11		ansible_ssh_port=22	# Direktanbindung FFRL
+gw02-1		ansible_ssh_host=176.9.153.11		ansible_ssh_port=22	# Direktanbindung FFRL Backbone
 gw02-2		ansible_ssh_host=5.9.168.250		ansible_ssh_port=22	# Direktanbindung FFRL
 
 # remue-08		ansible_ssh_host=148.251.208.175	ansible_ssh_port=22
