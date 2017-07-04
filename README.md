@@ -10,3 +10,8 @@ Aktuell: ansible 2.3.1.0
   config file = /etc/ansible/ansible.cfg
   configured module search path = Default w/o overrides
   python version = 2.7.12 (default, Nov 19 2016, 06:48:10) [GCC 5.4.0 20160609]
+
+
+Auffälligkeiten:
+
+figlet wird nicht installiert - FAILED
