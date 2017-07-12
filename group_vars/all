@@ -1,11 +1,12 @@
 # Globale Variablen für alle Server
 # 20170705 Zak: ACHTUNG, die IP Adressen stimmen nicht !!!
+# 20170712 Zak: IP's angepasst
 domaenen:
   "01":
     name: Datteln
     community: FFOV
-    ffv4_network: 10.43.8.0/21
-    ffv6_network: 2a03:2260:115:100::/64
+    ffv4_network: 10.47.8.0/21
+    ffv6_network: 2a03:2260:200c:100::/64
     map_scale: 0.9
     map_show_contact: false
     map_max_age: 14
@@ -14,18 +15,8 @@ domaenen:
   "02":
     name: Waltrop
     community: FFOV
-    ffv4_network: 10.43.40.0/21
-    ffv6_network: 2a03:2260:115:500::/64
-    map_scale: 1.0
-    map_show_contact: false
-    map_max_age: 14
-    map_blinking_hours: 8
-    firmware: domaene02/
-  "02":
-    name: Waltrop
-    community: FFOV
-    ffv4_network: 10.43.40.0/21
-    ffv6_network: 2a03:2260:115:500::/64
+    ffv4_network: 10.47.40.0/21
+    ffv6_network: 2a03:2260:200c:200::/64
     map_scale: 1.0
     map_show_contact: false
     map_max_age: 14
@@ -34,8 +25,8 @@ domaenen:
   "03":
     name: Oer-Erkenschwick
     community: FFOV
-    ffv4_network: 10.43.40.0/21
-    ffv6_network: 2a03:2260:115:500::/64
+    ffv4_network: 10.47.40.0/21
+    ffv6_network: 2a03:2260:200c:300::/64
     map_scale: 1.0
     map_show_contact: false
     map_max_age: 14
@@ -44,8 +35,8 @@ domaenen:
   "04":
     name: Castrop-Rauxel
     community: FFOV
-    ffv4_network: 10.43.40.0/21
-    ffv6_network: 2a03:2260:115:500::/64
+    ffv4_network: 10.47.40.0/21
+    ffv6_network: 2a03:2260:200c:400::/64
     map_scale: 1.0
     map_show_contact: false
     map_max_age: 14
@@ -54,8 +45,8 @@ domaenen:
   "06":
     name: FastD-Domäne
     community: Test
-    ffv4_network: 10.43.48.0/21
-    ffv6_network: 2a03:2260:115:600::/64
+    ffv4_network: 10.47.48.0/21
+    ffv6_network: 2a03:2260:200c:600::/64
     map_scale: 1.0
     map_show_contact: false
     map_max_age: 14
@@ -64,8 +55,8 @@ domaenen:
   "09":
     name: Sonstige
     community: Test
-    ffv4_network: 10.43.48.0/21
-    ffv6_network: 2a03:2260:115:600::/64
+    ffv4_network: 10.47.48.0/21
+    ffv6_network: 2a03:2260:200c:900::/64
     map_scale: 1.0
     map_show_contact: false
     map_max_age: 14
@@ -85,21 +76,18 @@ batman:
 # Parameter für das eigene Freifunk-Netzwerk
 ff_network:
   # Eindeutige AS-Nummer des Netzwerk
-  as_number: 65251
+  as_number: 64862
   # IPv4 Adressraum
-  v4_network: 10.43.0.0/16
+  v4_network: 10.47.0.0/16
   # IPv6 adressraum
-  v6_network: 2a03:2260:115::/48
+  v6_network: 2a03:2260:200c::/48
 
-hostname_suffix: ".servers.freifunk-muensterland.de"
+hostname_suffix: ".servers.freifunk-ostvest.de"
 
 administratorenteam:
-  - "parad0x"
-  - "void"
-  - "kgbvax"
-  - "fanlin"
-  - "fungur"
-  - "descilla"
+  - "Zak"
+  - "duese"
+  - "greenman"
   - "mpw"
   - "corny"
 
@@ -135,8 +123,8 @@ freifunk:
        A: 144.76.30.226
        AAAA: 2a01:4f8:191:21e1::23
     "unifi":
-       A: 10.43.128.14
-       AAAA: 2a03:2260:115:1600:5054:ff:fe14:bb9f
+       A: 10.47.128.14
+       AAAA: 2a03:2260:200c:1600:5054:ff:fe14:bb9f
 
 bind_zonemaster:
   server: service.freifunk-muensterland.de
