@@ -51,7 +51,7 @@ domaenen:
     map_show_contact: false
     map_max_age: 14
     map_blinking_hours: 8
-    firmware: domaene04/
+    firmware: domaene05/
   "06":
     name: FastD-Domäne
     community: Test
@@ -62,6 +62,26 @@ domaenen:
     map_max_age: 14
     map_blinking_hours: 8
     firmware: domaene06/
+  "07":
+    name: Reserve7
+    community: Test
+    ffv4_network: 10.47.48.0/21
+    ffv6_network: 2a03:2260:200c:700::/64
+    map_scale: 1.0
+    map_show_contact: false
+    map_max_age: 14
+    map_blinking_hours: 8
+    firmware: domaene07/
+  "08":
+    name: Reserve8
+    community: Test
+    ffv4_network: 10.47.48.0/21
+    ffv6_network: 2a03:2260:200c:800::/64
+    map_scale: 1.0
+    map_show_contact: false
+    map_max_age: 14
+    map_blinking_hours: 8
+    firmware: domaene08/
   "09":
     name: Sonstige
     community: Test
