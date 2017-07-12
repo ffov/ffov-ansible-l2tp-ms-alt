@@ -1,0 +1,74 @@
+# Variablen für Gateway-Server mit Direktanbindung zum FFRL 
+# Die Server-IP-Adresse wird durch von ansible bereitgestellte Variablen abgerufen (ansible_eth0.ipv4...)
+
+# ID des Servers. 
+# Hieraus wird die IP-Adresse innerhalb des Freifunk Netzwerkes gebildet.
+vm_id: 2
+server_id: 2
+server_besitzer: "FFRL / oVirt Berlin"
+
+# IPv4 Adresse auf die der Datenverkehr per NAT umgestezt wird
+# Nur für Backbone-Server notwendig  
+server_ipv4_nat: 185.66.195.6/32 
+    
+# GRE-Einstellungen zum Freifunk Rheinland
+# Bei v6 ist die ...::1 remote und die ...::2 lokal
+ffrl_tun:
+- name: bera
+  gre_target: 185.66.195.0
+  v4_remote: 100.64.7.60/31
+  v6_remote: 2a03:2260:0:3c3::1/64
+- name: fra2a
+  gre_target: 185.66.194.0
+  v4_remote: 100.64.7.62/31
+  v6_remote: 2a03:2260:0:3c4::1/64
+- name: dusa
+  gre_target: 185.66.193.0
+  v4_remote: 100.64.7.64/31
+  v6_remote: 2a03:2260:0:3c5::1/64
+- name: berb
+  gre_target: 185.66.195.1
+  v4_remote: 100.64.7.66/31
+  v6_remote: 2a03:2260:0:3c6::1/64
+- name: fra2b
+  gre_target: 185.66.194.1
+  v4_remote: 100.64.7.68/31
+  v6_remote: 2a03:2260:0:3c7::1/64
+- name: dusb
+  gre_target: 185.66.193.1
+  v4_remote: 100.64.7.70/31
+  v6_remote: 2a03:2260:0:3c8::1/64
+
+domaenenliste:
+   "01":
+      dhcp_start: 10.13.192.1
+      dhcp_ende: 10.13.195.255
+      server_id: 2
+   "02":
+      dhcp_start: 10.13.200.1
+      dhcp_ende: 10.13.203.255
+      server_id: 2
+   "03":
+      dhcp_start: 10.13.208.1
+      dhcp_ende: 10.13.211.255
+      server_id: 2
+   "04":
+      dhcp_start: 10.13.216.1
+      dhcp_ende: 10.13.219.255
+      server_id: 2
+   "05":
+      dhcp_start: 10.13.224.1
+      dhcp_ende: 10.13.227.255
+      server_id: 2
+   "06":
+      dhcp_start: 10.13.232.1
+      dhcp_ende: 10.13.235.255
+      server_id: 2
+   "07":
+      dhcp_start: 10.13.240.1
+      dhcp_ende: 10.13.243.255
+      server_id: 2
+   "08":
+      dhcp_start: 10.13.248.1
+      dhcp_ende: 10.13.251.255
+      server_id: 2
