@@ -42,6 +42,16 @@ domaenen:
     map_max_age: 14
     map_blinking_hours: 8
     firmware: domaene04/
+  "05":
+    name: Aussenposten
+    community: FFOV
+    ffv4_network: 10.47.40.0/21
+    ffv6_network: 2a03:2260:200c:500::/64
+    map_scale: 1.0
+    map_show_contact: false
+    map_max_age: 14
+    map_blinking_hours: 8
+    firmware: domaene04/
   "06":
     name: FastD-Domäne
     community: Test
