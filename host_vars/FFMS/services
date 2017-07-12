@@ -1,0 +1,15 @@
+server_besitzer: "warpzone"
+vm_id: 11
+server_id: 11
+
+bind:
+  ffms_zone_type: master
+  ns_name: ns01
+  ffms_for_groups:
+    - domaene-06
+#legacy_domain: yes
+
+nameservers:
+- "62.141.32.3"
+- "62.141.32.4"
+- "62.141.32.5"
