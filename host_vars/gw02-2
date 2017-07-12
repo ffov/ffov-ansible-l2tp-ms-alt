@@ -1,0 +1,74 @@
+# Variablen für Gateway-Server mit Direktanbindung zum FFRL 
+# Die Server-IP-Adresse wird durch von ansible bereitgestellte Variablen abgerufen (ansible_eth0.ipv4...)
+
+# ID des Servers. 
+# Hieraus wird die IP-Adresse innerhalb des Freifunk Netzwerkes gebildet.
+vm_id: 3
+server_id: 3
+server_besitzer: "TobiTX / vmware Hetzner"
+
+# IPv4 Adresse auf die der Datenverkehr per NAT umgestezt wird
+# Nur für Backbone-Server notwendig  
+server_ipv4_nat: 185.66.195.7/32 #ist doch die die mir FFRL geschickt hat oder?
+    
+# GRE-Einstellungen zum Freifunk Rheinland
+# Bei v6 ist die ...::1 remote und die ...::2 lokal
+ffrl_tun:
+- name: bera
+  gre_target: 185.66.195.0
+  v4_remote: 100.64.7.72/31
+  v6_remote: 2a03:2260:0:3c9::1/64
+- name: fra2a
+  gre_target: 185.66.194.0
+  v4_remote: 100.64.7.74/31
+  v6_remote: 2a03:2260:0:3ca::1/64
+- name: dusa
+  gre_target: 185.66.193.0
+  v4_remote: 100.64.7.76/31
+  v6_remote: 2a03:2260:0:3cb::1/64
+- name: berb
+  gre_target: 185.66.195.1
+  v4_remote: 100.64.7.78/31
+  v6_remote: 2a03:2260:0:3cc::1/64
+- name: fra2b
+  gre_target: 185.66.194.1
+  v4_remote: 100.64.7.80/31
+  v6_remote: 2a03:2260:0:3cd::1/64
+- name: dusb
+  gre_target: 185.66.193.1
+  v4_remote: 100.64.7.82/31
+  v6_remote: 2a03:2260:0:3ce::1/64
+
+domaenenliste:
+   "01":
+      dhcp_start: 10.13.196.1
+      dhcp_ende: 10.13.199.254
+      server_id: 3
+   "02":
+      dhcp_start: 10.13.204.1
+      dhcp_ende: 10.13.207.254
+      server_id: 3
+   "03":
+      dhcp_start: 10.13.212.1
+      dhcp_ende: 10.13.215.254
+      server_id: 3
+   "04":
+      dhcp_start: 10.13.220.1
+      dhcp_ende: 10.13.223.254
+      server_id: 3
+   "05":
+      dhcp_start: 10.13.228.1
+      dhcp_ende: 10.13.231.254
+      server_id: 3
+   "06":
+      dhcp_start: 10.13.236.1
+      dhcp_ende: 10.13.239.254
+      server_id: 3
+   "07":
+      dhcp_start: 10.13.244.1
+      dhcp_ende: 10.13.247.254
+      server_id: 3
+   "08":
+      dhcp_start: 10.13.252.1
+      dhcp_ende: 10.13.255.254
+      server_id: 3
